@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Jump Over</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>id.dncc.jumpover</app-id>
+    <unique-id>21pd8uvwwfmna</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>480</width>
+        <height>800</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="285420632169744">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="139394443325414" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan1\Background.png">
+                        <collision-poly>
+                            <point x="0.003125" y="0.00175439" />
+                            <point x="0.996875" y="0.00175439" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pijakan" sid="508818283886163">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="544332226581238">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719847659361829" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan1\ground_wood_small_broken.png">
+                        <collision-poly>
+                            <point x="0.04" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.945" y="0" />
+                            <point x="1" y="0.18" />
+                            <point x="0.86" y="1" />
+                            <point x="0.5" y="0.96" />
+                            <point x="0.105" y="0.92" />
+                            <point x="0" y="0.23" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="291163556941889">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="752769168195804">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="stand" pingpong="0" repeatcount="1" repeatto="0" sid="202895061269843" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502488" original-source="D:\Construct Project\pertemuan1\bunny1_stand.png">
+                        <collision-poly>
+                            <point x="0.308333" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.708333" y="0" />
+                            <point x="1" y="0.646766" />
+                            <point x="0.808333" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.183333" y="1" />
+                            <point x="0" y="0.646766" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="126941146084635" speed="13">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502488" original-source="D:\Construct Project\pertemuan1\bunny1_stand.png">
+                        <collision-poly>
+                            <point x="0.283333" y="0" />
+                            <point x="0.516667" y="0" />
+                            <point x="0.708333" y="0" />
+                            <point x="1" y="0.636816" />
+                            <point x="0.775" y="1" />
+                            <point x="0.483333" y="1" />
+                            <point x="0.216667" y="1" />
+                            <point x="0" y="0.646766" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="D:\Construct Project\pertemuan1\bunny1_ready.png">
+                        <collision-poly>
+                            <point x="0.208333" y="0" />
+                            <point x="0.483333" y="0" />
+                            <point x="0.775" y="0" />
+                            <point x="1" y="0.696335" />
+                            <point x="0.8" y="1" />
+                            <point x="0.491667" y="1" />
+                            <point x="0.216667" y="1" />
+                            <point x="0" y="0.659686" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502762" original-source="D:\Construct Project\pertemuan1\bunny1_jump.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.666667" y="0" />
+                            <point x="0.833333" y="0.458563" />
+                            <point x="1" y="1" />
+                            <point x="0.506667" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.14" y="0.497238" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="jatuh" pingpong="0" repeatcount="1" repeatto="0" sid="902773167397216" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="D:\Construct Project\pertemuan1\bunny1_ready.png">
+                        <collision-poly>
+                            <point x="0.216667" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.791667" y="0" />
+                            <point x="1" y="0.696335" />
+                            <point x="0.783333" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.2" y="1" />
+                            <point x="0" y="0.6911" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502488" original-source="D:\Construct Project\pertemuan1\bunny1_stand.png">
+                        <collision-poly>
+                            <point x="0.291667" y="0" />
+                            <point x="0.483333" y="0" />
+                            <point x="0.7" y="0" />
+                            <point x="1" y="0.636816" />
+                            <point x="0.775" y="1" />
+                            <point x="0.483333" y="1" />
+                            <point x="0.208333" y="1" />
+                            <point x="0" y="0.631841" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kiri" sid="310423420198424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="def" pingpong="0" repeatcount="1" repeatto="0" sid="870740338408671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan1\kiri.png">
+                        <collision-poly>
+                            <point x="0.190909" y="0.227273" />
+                            <point x="0.5" y="0.0454545" />
+                            <point x="0.790909" y="0.181818" />
+                            <point x="0.909091" y="0.481818" />
+                            <point x="0.763636" y="0.754546" />
+                            <point x="0.5" y="0.881818" />
+                            <point x="0.227273" y="0.8" />
+                            <point x="0.0818182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="touch" pingpong="0" repeatcount="1" repeatto="0" sid="452016805469775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.172727" y="0.172727" />
+                            <point x="0.5" y="0.00909091" />
+                            <point x="0.827273" y="0.172727" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.818182" y="0.818182" />
+                            <point x="0.5" y="0.936364" />
+                            <point x="0.181818" y="0.818182" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kanan" sid="756369135924049">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="deff" pingpong="0" repeatcount="1" repeatto="0" sid="774387975840449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan1\kanan.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.181818" />
+                            <point x="0.5" y="0.0636364" />
+                            <point x="0.818182" y="0.181818" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.827273" y="0.827273" />
+                            <point x="0.5" y="0.990909" />
+                            <point x="0.172727" y="0.827273" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="touch" pingpong="0" repeatcount="1" repeatto="0" sid="729736513483259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.181818" y="0.181818" />
+                            <point x="0.5" y="0.0636364" />
+                            <point x="0.818182" y="0.181818" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.827273" y="0.827273" />
+                            <point x="0.5" y="0.990909" />
+                            <point x="0.172727" y="0.827273" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="786180184530799">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Score" sid="471220475896535">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Enemies" sid="673056684616992">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Pergerakan" sid="280523192095797" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="337127815385179">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="307778285766690" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\enemies\enemyFlying_1.png">
+                        <collision-poly>
+                            <point x="0.109375" y="0" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.890625" y="0" />
+                            <point x="0.734375" y="0.447368" />
+                            <point x="0.6875" y="0.81579" />
+                            <point x="0.5" y="1" />
+                            <point x="0.296875" y="0.842105" />
+                            <point x="0.265625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\enemies\enemyFlying_2.png">
+                        <collision-poly>
+                            <point x="0" y="0.368421" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="1" y="0.368421" />
+                            <point x="0.75" y="0.578947" />
+                            <point x="0.703125" y="0.842105" />
+                            <point x="0.5" y="1" />
+                            <point x="0.3125" y="0.921053" />
+                            <point x="0.25" y="0.552631" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="D:\Construct Project\enemies\enemyFlying_3.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.372093" />
+                            <point x="0.5" y="0.325581" />
+                            <point x="0.71875" y="0.418605" />
+                            <point x="0.734375" y="0.697674" />
+                            <point x="0.890625" y="1" />
+                            <point x="0.5" y="0.883721" />
+                            <point x="0.09375" y="1" />
+                            <point x="0.296875" y="0.627907" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.368421" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="1" y="0.368421" />
+                            <point x="0.75" y="0.578947" />
+                            <point x="0.703125" y="0.842105" />
+                            <point x="0.5" y="1" />
+                            <point x="0.3125" y="0.921053" />
+                            <point x="0.25" y="0.552631" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.109375" y="0" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.890625" y="0" />
+                            <point x="0.734375" y="0.447368" />
+                            <point x="0.6875" y="0.81579" />
+                            <point x="0.5" y="1" />
+                            <point x="0.296875" y="0.842105" />
+                            <point x="0.265625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="1" name="Kebalik" pingpong="0" repeatcount="1" repeatto="0" sid="378056320015143" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.265625" y="0.5" />
+                            <point x="0.296875" y="0.157895" />
+                            <point x="0.5" y="0" />
+                            <point x="0.6875" y="0.18421" />
+                            <point x="0.734375" y="0.552632" />
+                            <point x="0.890625" y="1" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0.109375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.447369" />
+                            <point x="0.3125" y="0.078947" />
+                            <point x="0.5" y="0" />
+                            <point x="0.703125" y="0.157895" />
+                            <point x="0.75" y="0.421053" />
+                            <point x="1" y="0.631579" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0" y="0.631579" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.488372">
+                        <collision-poly>
+                            <point x="0.296875" y="0.372093" />
+                            <point x="0.09375" y="0" />
+                            <point x="0.5" y="0.116279" />
+                            <point x="0.890625" y="0" />
+                            <point x="0.734375" y="0.302326" />
+                            <point x="0.71875" y="0.581395" />
+                            <point x="0.5" y="0.674419" />
+                            <point x="0.28125" y="0.627907" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.447369" />
+                            <point x="0.3125" y="0.078947" />
+                            <point x="0.5" y="0" />
+                            <point x="0.703125" y="0.157895" />
+                            <point x="0.75" y="0.421053" />
+                            <point x="1" y="0.631579" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0" y="0.631579" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.265625" y="0.5" />
+                            <point x="0.296875" y="0.157895" />
+                            <point x="0.5" y="0" />
+                            <point x="0.6875" y="0.18421" />
+                            <point x="0.734375" y="0.552632" />
+                            <point x="0.890625" y="1" />
+                            <point x="0.5" y="0.631579" />
+                            <point x="0.109375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Moving_Background" sid="614953497180383">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="852911029608120">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764565127009241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\Background.png">
+                        <collision-poly>
+                            <point x="0.003125" y="0.00175439" />
+                            <point x="0.996875" y="0.00175439" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Jump" sid="619526067431226">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="901826823595485">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288870917016976" speed="5">
+                    <frame duration="1" hotspotX="0.50237" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\Jump.png">
+                        <collision-poly>
+                            <point x="0.127962" y="0.293478" />
+                            <point x="0.49763" y="0.152174" />
+                            <point x="0.905213" y="0.217391" />
+                            <point x="0.92891" y="0.5" />
+                            <point x="0.843602" y="0.641304" />
+                            <point x="0.49763" y="0.684783" />
+                            <point x="0.0947867" y="0.782609" />
+                            <point x="0.042654" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="over" sid="555546020832230">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="670439512602635">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="242615090599790" speed="5">
+                    <frame duration="1" hotspotX="0.502513" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\over.png">
+                        <collision-poly>
+                            <point x="0.080402" y="0.181818" />
+                            <point x="0.497487" y="0.159091" />
+                            <point x="0.894472" y="0.238636" />
+                            <point x="0.934673" y="0.5" />
+                            <point x="0.909548" y="0.795455" />
+                            <point x="0.497487" y="0.738636" />
+                            <point x="0.110553" y="0.75" />
+                            <point x="0.0452261" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Play" sid="554472100764647">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="251894174441446">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757864742838792" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\Play.png">
+                        <collision-poly>
+                            <point x="0.172727" y="0.172727" />
+                            <point x="0.5" y="0.00909091" />
+                            <point x="0.827273" y="0.172727" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.818182" y="0.818182" />
+                            <point x="0.5" y="0.936364" />
+                            <point x="0.181818" y="0.818182" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Game_Over" sid="138634338209011">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="545667489323342" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\Game_Over1.png">
+                        <collision-poly>
+                            <point x="0.076555" y="0.177778" />
+                            <point x="0.497608" y="0.188889" />
+                            <point x="0.899522" y="0.233333" />
+                            <point x="0.899522" y="0.5" />
+                            <point x="0.923445" y="0.822222" />
+                            <point x="0.497608" y="0.733333" />
+                            <point x="0.105263" y="0.755556" />
+                            <point x="0.0382775" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Game_Over2" sid="435211133912689">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769678934473239" speed="5">
+                    <frame duration="1" hotspotX="0.502513" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\Game_Over2.png">
+                        <collision-poly>
+                            <point x="0.080402" y="0.181818" />
+                            <point x="0.497487" y="0.159091" />
+                            <point x="0.894472" y="0.238636" />
+                            <point x="0.934673" y="0.5" />
+                            <point x="0.909548" y="0.795455" />
+                            <point x="0.497487" y="0.738636" />
+                            <point x="0.110553" y="0.75" />
+                            <point x="0.0452261" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="score_img" sid="398059999878618">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513617519504645" speed="5">
+                    <frame duration="1" hotspotX="0.502128" hotspotY="0.505618" original-source="D:\Construct Project\pertemuan2\score.png">
+                        <collision-poly>
+                            <point x="0.0723404" y="0.191011" />
+                            <point x="0.497872" y="0.101124" />
+                            <point x="0.919149" y="0.213483" />
+                            <point x="0.910638" y="0.494382" />
+                            <point x="0.92766" y="0.808989" />
+                            <point x="0.497872" y="0.842697" />
+                            <point x="0.0808511" y="0.786517" />
+                            <point x="0.0510638" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Last_Score" sid="840321563299945">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="restart" sid="142703125532886">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433758582053222" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Construct Project\pertemuan2\restart-sheet0.png">
+                        <collision-poly>
+                            <point x="0.1125" y="0.1125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8875" y="0.1125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.9" />
+                            <point x="0.0125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HighScore" sid="836237468106629">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801241154975984" speed="5">
+                    <frame duration="1" hotspotX="0.501199" hotspotY="0.505495" original-source="D:\Construct Project\pertemuan2\HighScore.png">
+                        <collision-poly>
+                            <point x="0.0407674" y="0.186813" />
+                            <point x="0.498801" y="0.153846" />
+                            <point x="0.94964" y="0.230769" />
+                            <point x="0.959233" y="0.813187" />
+                            <point x="0.498801" y="0.835165" />
+                            <point x="0.057554" y="0.736264" />
+                            <point x="0.0215827" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="High_Score" sid="200945840454091">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LocalStorage" sid="615319255701168">
+            <plugin id="LocalStorage" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>PLAY.xml</layout>
+        <layout>Home.xml</layout>
+        <layout>GameOver.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>PLAY.xml</event-sheet>
+        <event-sheet>Home.xml</event-sheet>
+        <event-sheet>GameOver.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="11">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="26" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

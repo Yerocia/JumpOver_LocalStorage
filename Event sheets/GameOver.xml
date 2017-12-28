@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <event-block sid="605378008576364">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="329763290783884" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="522734702516229" type="Last_Score">
+                    <param id="0" name="Text">Score</param>
+                </action>
+                <action id="0" name="Set text" sid="659640383627335" type="High_Score">
+                    <param id="0" name="Text">High_Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="717495020935077">
+            <conditions>
+                <condition id="17" name="On tap object" sid="789895528391587" type="Touch">
+                    <param id="0" name="Object">restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="862954920909148" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="105879853743153" type="System" />
+                <action id="-21" name="Reset global variables" sid="980456752206373" type="System" />
+                <action id="-45" name="Reset persisted objects" sid="562849467775824" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
